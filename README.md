@@ -1,27 +1,30 @@
 # 🛍️ TrendPulse: E-Commerce Analytics Dashboard
 
-**Data Analytics | Python | Power BI | RFM Segmentation | Customer Insights**
+**Data Analytics | Python | SQL | Power BI | RFM Segmentation | Forecasting | Customer Insights**
 
 ---
 
 ## 📊 Project Overview
 
-**TrendPulse** is a full-scale **E-Commerce Sales & Customer Analytics Dashboard** inspired by how leading retail brands like *Myntra* and *Amazon* leverage data-driven insights.
+**TrendPulse** is a full-scale **E-Commerce Sales & Customer Analytics Dashboard** designed to help retail businesses make smarter, data-driven decisions.
 
-This project analyzes **50K+ sales transactions** to identify:
-- 🔝 Top-performing product categories and regions  
+The project analyzes **50K+ sales transactions** to uncover:
+- 🔝 Top-performing product categories & regions  
 - 🎯 Key customer segments via **RFM analysis**  
-- 💰 Profitability & retention trends  
-- 📈 Future sales forecasts using Prophet  
+- 💰 Profitability & retention patterns  
+- 📈 Future sales forecasts with Prophet  
+
+It mirrors how BI teams at **Myntra, Flipkart, or Amazon** use analytics for marketing & inventory optimization.
 
 ---
 
 ## 🧠 Business Objective
 
-To uncover insights that improve:
-- Marketing targeting precision  
-- Customer retention  
-- Inventory optimization efficiency (~20% projected improvement)
+To uncover insights that drive:
+- Targeted marketing & customer engagement  
+- Improved retention through RFM segmentation  
+- Smarter inventory planning (up to **20% efficiency boost**)  
+- End-to-end KPI visibility across sales and customer data  
 
 ---
 
@@ -29,73 +32,98 @@ To uncover insights that improve:
 
 | Tool | Purpose |
 |------|----------|
-| **Python (Pandas, NumPy)** | Data cleaning, transformation & analysis |
-| **Matplotlib, Seaborn** | Data visualization |
+| **Python (Pandas, NumPy, Matplotlib, Seaborn)** | Data cleaning, analysis & visualization |
 | **Prophet (Meta)** | Time-series forecasting |
-| **Power BI / Excel** | Dashboard visualization |
-| **SQL (optional)** | Query-based exploration |
+| **Power BI** | Interactive KPI dashboard & storytelling |
+| **SQL (optional)** | Query-based data exploration |
+| **Excel** | Quick data validation & pivot checks |
 
 ---
 
 ## 📂 Dataset
 
-**Source:** Custom Kaggle dataset (E-commerce transactions)
+**Source:** Kaggle (E-commerce transactions dataset)  
+**Records:** 50,000+  
+**Time Period:** 2023–2024  
 
 | Column | Description |
-|--------|--------------|
+|--------|-------------|
 | `Transaction_ID` | Unique order identifier |
 | `User_Name` | Customer name |
 | `Age` | Age of customer |
-| `Country` | Purchase location |
-| `Product_Category` | Category of product purchased |
+| `Country` | Customer location |
+| `Product_Category` | Purchased product category |
 | `Purchase_Amount` | Transaction value (USD) |
 | `Payment_Method` | Mode of payment |
 | `Transaction_Date` | Date of purchase |
-
-**Rows:** 50,000+  
-**Period Covered:** 2023–2024  
 
 ---
 
 ## 🧩 Key Analyses
 
-### 1️⃣ Sales Trend Analysis  
-📈 Monthly sales trend visualized to identify high-performing seasons.
+### 1️⃣ Sales & Revenue Trends  
+- Monthly, regional, and category-wise sales analysis.  
+- Identified top-performing regions & sales spikes.
 
-### 2️⃣ Product & Region Performance  
-🏆 Top-selling **categories** and **countries** highlighted.
+### 2️⃣ Product & Country Performance  
+- Highlighted top product categories using a **Tree Map**.  
+- Country-based sales mapped for global visibility.
 
-### 3️⃣ RFM Customer Segmentation  
-Segmented customers into:
-- **Champions**
-- **Loyal Customers**
-- **Potential Loyalists**
-- **At Risk**
-- **Lost Customers**
+### 3️⃣ Customer Segmentation (RFM)  
+Used **Recency, Frequency, Monetary (RFM)** model to identify:  
+- 🥇 Champions  
+- 💎 Loyal Customers  
+- ⚠️ At Risk  
+- ❌ Lost Customers  
 
-### 4️⃣ Cohort Retention  
-Visualized repeat purchase behavior across months.
+### 4️⃣ Cohort Retention Analysis  
+- Tracked repeat purchase behavior across months.  
+- Evaluated long-term retention health.
 
-### 5️⃣ Sales Forecasting  
-Predicted next 6 months’ revenue using **Prophet**.
+### 5️⃣ Forecasting  
+- Built **Prophet model** for future sales prediction.  
+- Forecast visualized in Power BI.
 
 ---
+
+## 📸 Power BI Dashboard Overview
+
+All outputs from Python (CSV files) were loaded into **Power BI** for interactive visualization.
+
+### 🎯 KPI Cards
+| KPI | Formula | Purpose |
+|------|----------|---------|
+| **Total Sales** | `SUM(Purchase_Amount)` | Overall revenue |
+| **Total Customers** | `DISTINCTCOUNT(User_Name)` | Unique buyers |
+| **Average Order Value (AOV)** | `SUM(Purchase_Amount)/DISTINCTCOUNT(Transaction_ID)` | Avg. spend per order |
+
+### 📊 Core Visuals
+| Visual Type | Dataset | Insight |
+|--------------|----------|----------|
+| 📈 **Line Chart** | `monthly_sales.csv` | Sales trend over time |
+| 🌳 **Tree Map** | `category_sales.csv` | Top-performing categories |
+| 🌍 **Map Chart** | `country_sales.csv` | Regional performance |
+| 💳 **Donut Chart** | `payment_sales.csv` | Payment method breakdown |
+| 🧮 **Table / Heatmap** | `rfm_segments.csv` | Customer segmentation |
+| 🔮 **Forecast Line** | Prophet Output | Future sales projection |
+
+---
+
+## 🖼️ Power BI Layout Suggestion
+
+**Dashboard Sections:**
+
 
 ## 📸 Visual Insights
 <img width="1492" height="717" alt="image" src="https://github.com/user-attachments/assets/608f5519-6569-463a-9647-157cbfb28eb3" />
 
 <img width="1307" height="662" alt="image" src="https://github.com/user-attachments/assets/00910ed6-8b79-4c4b-8dac-027b2f07af76" />
-
-
-| Visualization | Description |
-|----------------|-------------|
-| 📆 Line Chart | Monthly sales trend |
-| 🌍 Bar Chart | Top countries by revenue |
-| 💳 Payment Mix | Preferred payment methods |
-| 🧮 RFM Heatmap | Customer segmentation |
-| 🔮 Forecast Plot | Predicted future sales |
+<img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/8338c95d-ea0f-4935-a50d-cd0e09303e3d" />
 
 
 
-## 📁 Folder Structure
+
+
+
+
 
