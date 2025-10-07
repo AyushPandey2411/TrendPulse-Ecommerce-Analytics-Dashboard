@@ -35,7 +35,7 @@ To uncover insights that drive:
 | **Python (Pandas, NumPy, Matplotlib, Seaborn)** | Data cleaning, analysis & visualization |
 | **Prophet (Meta)** | Time-series forecasting |
 | **Power BI** | Interactive KPI dashboard & storytelling |
-| **SQL (optional)** | Query-based data exploration |
+| **SQL** | Query-based data exploration |
 | **Excel** | Quick data validation & pivot checks |
 
 ---
